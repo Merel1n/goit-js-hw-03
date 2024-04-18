@@ -4,9 +4,13 @@
 // Значенням параметра title будуть рядки, слова яких розділені лише пробілами.
 // Усі символи slug повинні бути в нижньому регістрі.
 // Усі слова slug повинні бути розділені тире.
+
+function slugify(title) {
+    let slug = title.toLowerCase().split(" ").join("-");
+    return slug;
+}
+
 // Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть виведені результати її роботи.
-
-
 
 console.log(slugify("Arrays for begginers")); // "arrays-for-begginers"
 console.log(slugify("English for developer")); // "english-for-developer"
